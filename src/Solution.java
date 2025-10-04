@@ -6,10 +6,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-
-
 class Result {
-
     /*
      * Complete the 'maximumLearning' function below.
      *
@@ -19,7 +16,6 @@ class Result {
      *  2. INTEGER_ARRAY articles
      *  3. INTEGER p
      */
-
     public static int maximumLearning(List<Integer> iv, List<Integer> articles, int p) {
 	
     List<Integer> artCount = new ArrayList<Integer>();
@@ -32,15 +28,12 @@ class Result {
 		 * 3 3 2 2 3 3 2 2 9
 		 */
     
-    
-    
    int max = Integer.MIN_VALUE;
    for(int i=0; i<iv.size(); i++){
        if(iv.get(i) > max){
            max = iv.get(i);
        }
    }
-   
     	return p;
     }
 
@@ -49,21 +42,16 @@ class Result {
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-      //  BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
         int ivCount = Integer.parseInt(bufferedReader.readLine().trim());
-
         List<Integer> iv = new ArrayList<>();
-
+		
         for (int i = 0; i < ivCount; i++) {
             int ivItem = Integer.parseInt(bufferedReader.readLine().trim());
             iv.add(ivItem);
         }
 
         int articlesCount = Integer.parseInt(bufferedReader.readLine().trim());
-
         List<Integer> articles = new ArrayList<>();
-
         for (int i = 0; i < articlesCount; i++) {
             int articlesItem = Integer.parseInt(bufferedReader.readLine().trim());
             articles.add(articlesItem);
@@ -73,11 +61,8 @@ public class Solution {
 
         int result = Result.maximumLearning(iv, articles, p);
 
-       // bufferedWriter.write(String.valueOf(result));
-        //bufferedWriter.newLine();
-
         bufferedReader.close();
-       // bufferedWriter.close();
     }
     
 }
+
